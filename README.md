@@ -36,5 +36,13 @@ The features.txt table is read in, and a table "mean_and_std" is created by grep
 
 The names from "mean_and_std" are then applied to the columns in x.dat.
 
-Activities are then read in from "activities.txt". They are applied as the column names in y.dat
+Activities are then read in from "activities.txt". They are applied as the column names in y.dat.
+
+The subject.dat table is given the column name "subject".
+
+cbind is used to combine "subject.dat", "x.dat", and "y.dat" into the table "all_data".
+
+plyr.ddply and colMeans is used to get the averages for all columns containing numerical data in a table "averages.dat"
+
+"Averages.dat" is then output into a .txt file using write.table.
 
